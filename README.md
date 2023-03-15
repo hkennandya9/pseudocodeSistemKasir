@@ -1,21 +1,21 @@
-Nama 				: Hafizh Kennandya Maulana
-ID Camp 			: FE4593655
-Kelas		 		: FE-2
-Referensi Aplikasi	: Sistem Kasir
-Menu 				: Memasukan item dan auto calculate total harga
+Nama 				: Hafizh Kennandya Maulana</br>
+ID Camp 		: FE4593655</br>
+Kelas		 		: FE-2</br>
+Referensi Aplikasi	: Sistem Kasir</br>
+Menu 				: Memasukan item dan auto calculate total harga</br>
 
 PROGRAM SistemKasir
 
-STORE "total" WITH NUMBER 0									// Variabel integer untuk menampung total harga item
-STORE "input" WITH BOOLEAN TRUE								// Variabel boolean penentu untuk menambahkan item
+STORE "total" WITH NUMBER 0
+STORE "input" WITH BOOLEAN TRUE
 
-STORE "count" WITH NUMBER 0									// Variabel integer untuk index di dalam looping dan menghitung banyaknya item
+STORE "count" WITH NUMBER 0
 WHILE "input"
 	DO
-	READ AND WRITE "item["count"]["name"]" WITH STRING				// Memasukkan nama item pada array item ke-i dengan tipe data string
-	READ AND WRITE "item["count"]["price"]" WITH NUMBER				// Memasukkan harga item pada array item ke-i dengan tipe data number
-	STORE "total" WITH CALCULATE "total" PLUS "item["count"]["price"]"	// Menghitung total harga item
-	WRITE "input" WITH BOOLEAN								// Memasukkan penentu untuk menambahkan item, true (tambah item) atau false (tidak tambah item)
-	STORE "count" WITH "count" PLUS 1							// Melakukan penambahan index untuk penunjuk ke item berikutnya
+	READ AND WRITE "item["count"]["name"]" WITH STRING
+	READ AND WRITE "item["count"]["price"]" WITH NUMBER
+	STORE "total" WITH CALCULATE "total" PLUS "item["count"]["price"]"
+	WRITE "input" WITH BOOLEAN
+	STORE "count" WITH "count" PLUS 1
 
-PRINT "total"											// Menampilkan total harga item
+PRINT "total"
